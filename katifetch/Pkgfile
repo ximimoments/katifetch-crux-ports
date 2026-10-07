@@ -1,0 +1,14 @@
+# Description: Cross-platform system information tool written in Bash
+# URL: https://github.com/ximimoments/katifetch
+# Maintainer: ximimoments <ximimoments3232@hotmail.com>
+# Packager: ximimoments
+
+name=katifetch
+version=13.1
+release=1
+source=(https://github.com/ximimoments/katifetch/archive/refs/tags/$version.tar.gz)
+
+build() {
+    cd $name-$version
+    install -Dm755 katifetch.sh "$PKG/usr/local/bin/katifetch"
+}
